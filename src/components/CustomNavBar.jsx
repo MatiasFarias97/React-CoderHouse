@@ -1,10 +1,10 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 // import logo from '../img/logo_moscato.svg'
-import { BsCart2 } from 'react-icons/bs';
-import Badge from 'react-bootstrap/Badge';
+// import { BsCart2 } from 'react-icons/bs';
+// import Badge from 'react-bootstrap/Badge';
+import CartWidget from './CartWidget'
 
 const CustomNavBar = () => {
 
@@ -23,10 +23,7 @@ const CustomNavBar = () => {
           </Nav>
         </Navbar.Collapse>
       </Container>
-        <div className='divCart'>
-          <BsCart2  className='cart'/>
-          <Badge bg="info">9</Badge>
-        </div>
+        <CartWidget />
     </Navbar>
   
     )
