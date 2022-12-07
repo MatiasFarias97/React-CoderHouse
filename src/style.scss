@@ -1,15 +1,30 @@
-.logoStyle{
-    width: 200px;
-    height: 200px;
+.bgBody{
+    background-image: url(/src/img/bg_body.svg);
+    background-size: 100%;
+    background-color: #000000;
+}
+
+.navLogo{
+    width: 100%;
+    margin-right: 40px;
 }
 
 .navStyle{
     background-color: #000000bd;
     color: white;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
+
+    a{
+        font-size: 1.5rem;
+        color: white;
+        font-weight: 400;
+        text-decoration: none;
+        list-style: none;
+        
+    }
 
 }
 
@@ -17,15 +32,6 @@
     justify-content: end;
     align-items: flex-start;
     margin: auto;
-}
-
-.navTitle{
-    color: white;
-    font-weight: bold;
-    background-color: black;
-    padding: 10px;
-    text-align: start;
-    border-radius: 10px;
 }
 
 .divCart{
@@ -43,4 +49,57 @@
     position: static;
 }
 
+.textWhite{
+    color: white;
+}
 
+.containerItemsStyle{
+    display: flex;
+    padding: 20px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    
+}
+
+.cardStyle{
+
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+    width: 15%;
+    text-align: center;
+
+}
+
+.containerItemDetail{
+    width: 80%;
+    margin: 15px auto;
+    justify-content: space-evenly;
+}
+
+.imgItemDetail{
+    width: 30%;
+    background-color: black;
+    
+}
+
+.textItemDetail{
+
+    margin: 0px 20px;
+    h2,h3,p{
+        color: white;
+        text-align: center;
+    }
+
+    h3{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    p{
+        font-size: 2rem;
+        margin-top: 40px;
+
+    }
+}
