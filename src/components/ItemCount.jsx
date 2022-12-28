@@ -1,35 +1,50 @@
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
 
-const ItemCount = (start = 0) =>{
 
-    const [count, setCount] = useState(0)
+const ItemCount = ({start,stock,onAdd}) =>{
+
+    const [count, setCount] = useState(start)
 
     useEffect(() => {
         setCount(start)
     }, [])
 
+
     const increment = () => {
-        setCount(count + 1)
+        
+        if(count < stock){
+                        
+            setCount(count + 1);
     }
+}
 
     const decrement = () => {
-        setCount(count - 1)
+        if(count > start){
+                        
+            setCount(count - 1);
+        }
     }
 
   return (
     <div className='itemCount'>
         <ButtonGroup aria-label="Basic example">
-            <Button variant="light" onClick={increment}> - </Button>
-            {/* <span className='numberCount'>{count}</span> */}
-            <Button variant="light" onClick={decrement}> + </Button>
-        </ButtonGroup>   
-        <button>Agregar al carrito</button>
+            <Button variant="light" onClick={decrement}> - </Button>
+            <span className='numberCount'>{count}</span>
+            <Button variant="light" onClick={increment}> + </Button>
+        </ButtonGroup>  
+        {
+            stock
+            ?  <button onClick={() => onAdd(count)}>Agregar al carrito</button>
+            : <p>No hay stock</p>
+        } 
     </div>
 
   );
 
+ 
 }
 
 

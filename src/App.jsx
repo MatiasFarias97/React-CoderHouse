@@ -3,11 +3,16 @@ import CustomNavBar from './components/CustomNavBar.jsx'
 import ItemListContainer from './components/ItemListContainer.jsx';
 import ItemDetailContainer from './components/ItemDetailContainer'
 import Cart from './components/Cart'
+import Footer from './components/Footer.jsx';
+import CartContextProvider from './components/CartContext.jsx';
+
 
 const App = () => {
   
-  return(
+  return (
+
     <div className='bgBody'>
+   <CartContextProvider>
     <BrowserRouter>
       <CustomNavBar/>
       <Routes>
@@ -16,16 +21,11 @@ const App = () => {
           <Route path='/item/:idItem' element={<ItemDetailContainer/>}/>
           <Route path='/cart' element={<Cart/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
+   </CartContextProvider>
     </div>
   )
-
-  // return(
-  //   <div className='bgBody'>
-  //     <CustomNavBar/>
-  //     <ItemDetail/>
-  //   </div>
-  // )
 }
 
 export default App;

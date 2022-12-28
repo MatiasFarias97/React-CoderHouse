@@ -9,7 +9,7 @@ const Item = ({ id, name, stock, price, pictureUrl }) => {
       <Card.Body>
         <Card.Title><strong>{name}</strong></Card.Title>
         <Card.Text>
-          {price}
+  
         </Card.Text>
         <Link to={`/item/${id}`} className="btn btn-primary">Detalles</Link>
       </Card.Body>

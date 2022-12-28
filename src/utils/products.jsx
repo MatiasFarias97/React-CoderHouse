@@ -14,6 +14,7 @@ const products = [
         image: ["https://res.cloudinary.com/dog6eblxr/image/upload/v1670253645/branca_htkpzm.webp"],
         sales: 0,
         categoryId: 3,
+        stock: 10
     },
     {
         id: 2,
@@ -24,6 +25,7 @@ const products = [
         image: ["https://res.cloudinary.com/dog6eblxr/image/upload/v1670253629/andes_ipa_tnkc9l.webp"],
         sales: 0,
         categoryId: 2,
+        stock: 10
 
     },
     {
@@ -35,6 +37,7 @@ const products = [
         image: ["https://res.cloudinary.com/dog6eblxr/image/upload/v1670253645/corona330ml_t8gnxv.webp"],
         sales: 0,
         categoryId: 2,
+        stock: 10
     },
     {
         id: 5,
@@ -45,6 +48,7 @@ const products = [
         image: ["https://res.cloudinary.com/dog6eblxr/image/upload/v1670253644/heineken_473ml_yj2kvk.webp"],
         sales: 0,
         categoryId: 2,
+        stock: 10
     },
     {
         id: 6,
@@ -55,6 +59,7 @@ const products = [
         image: ["https://res.cloudinary.com/dog6eblxr/image/upload/v1670253644/stellaartois_473ml_gasemp.webp"],
         sales: 0,
         categoryId: 2,
+        stock: 10
     },
     {
         id: 7,
@@ -65,6 +70,7 @@ const products = [
         image: ["https://res.cloudinary.com/dog6eblxr/image/upload/v1670253644/jackdaniels_honey_fglm4e.webp"],
         sales: 0,
         categoryId: 3,
+        stock: 10
     },
     {
         id: 8,
@@ -75,6 +81,7 @@ const products = [
         image: ["https://res.cloudinary.com/dog6eblxr/image/upload/v1670253643/greygoose_o2ai30.webp"],
         sales: 0,
         categoryId: 3,
+        stock: 10
     },
     {
         id: 9,
@@ -85,16 +92,18 @@ const products = [
         image: ["https://res.cloudinary.com/dog6eblxr/image/upload/v1670253644/luigibosca_malbec_z1mage.webp"],
         sales: 0,
         categoryId: 1,
+        stock: 10
     },
     {
         id: 10,
         name: "Luigi Bosca cabernet sauvignon",
         cost: "$2700",
-        description: "es un tinto de color rojo rubí profundo y brillante. Sus aromas son sutiles y equilibrados, con notas de frutos negros, especias y cuero. En boca es jugoso y expresivo, con taninos finos y firmes que se agarran.",
+        description: "Es un tinto de color rojo rubí profundo y brillante. Sus aromas son sutiles y equilibrados, con notas de frutos negros, especias y cuero. En boca es jugoso y expresivo, con taninos finos y firmes que se agarran.",
         capacity:"750ml",
         image: ["https://res.cloudinary.com/dog6eblxr/image/upload/v1670253644/luigibosca_cabsauvignon_leyaan.webp"],
         sales: 0,
         categoryId: 1,
+        stock: 10
     },
     {
         id: 11,
@@ -105,6 +114,7 @@ const products = [
         image: ["https://res.cloudinary.com/dog6eblxr/image/upload/v1670253644/trapiche_reserva_chardonay_tiwx8l.webp"],
         sales: 0,
         categoryId: 1,
+        stock: 10
     },
     {
         id: 12,
@@ -115,6 +125,7 @@ const products = [
         image: ["https://res.cloudinary.com/dog6eblxr/image/upload/v1670253644/trumpeter_ntctsd.webp"],
         sales: 0,
         categoryId: 1,
+        stock: 10
     },
     {
         id: 13,
@@ -125,6 +136,7 @@ const products = [
         image: ["https://res.cloudinary.com/dog6eblxr/image/upload/v1670253644/trapiche_sauvblanc_cydrhn.webp"],
         sales: 0,
         categoryId: 1,
+        stock: 10
     },
     {
         id: 14,
@@ -135,6 +147,7 @@ const products = [
         image: ["https://res.cloudinary.com/dog6eblxr/image/upload/v1670253643/fernet_coca_jbldre.webp"],
         sales: 0,
         categoryId: 4,
+        stock: 10
     }
 ]
 
