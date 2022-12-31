@@ -3,6 +3,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import { CartContext } from './CartContext';
 import ItemCount from './ItemCount';
 import Swal from 'sweetalert2'
+import { Link } from 'react-router-dom';
 
 
 
@@ -28,23 +29,31 @@ const ItemDetail = ({ item }) =>{
     }
 
     return(
-        <div> 
+        <>
+        <div className='containerBtnCheckout'>
+            <Link to='/cart' className='btnCheckout btn btn-warning'>VER CARRITO</Link>
+        </div>
+
+        <div className=''> 
             {
                item && item.image
                ? 
-                <div className="container-fluid d-flex containerItemDetail gridItemDetail">
-                    <img src={item.image} className="imgItemDetail"></img>
-                    <div className="textItemDetail">
+                <div className="container-fluid d-flex containerInfoItem row">
+                    <img src={item.image} className="imgItemDetail col"></img>
+                    <div className="textItemDetail col">
                         <h2>{item.name}</h2>
                         <h3>{item.description}</h3>
                         <p>${item.cost}</p>
                     </div>
-
+                    <div className='itemDetailBtns col'>
                     <ItemCount start={0} stock={item.stock} onAdd={onAdd}/>
+                    </div>
                 </div>
                 : <Spinner animation="border" variant="light" />
+
             }
         </div>
+        </>
     )
 }
 

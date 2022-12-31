@@ -2,6 +2,11 @@
     background-image: url(/src/img/bg_body.svg);
     background-size: 100%;
     background-color: #000000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
 }
 
 .navLogo{
@@ -72,21 +77,44 @@
 
 }
 
-.containerItemDetail{
-    width: 80%;
+.containerInfoItem{
+    width: 70%;
     margin: 15px auto;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .imgItemDetail{
-    width: 30%;
+    width: 20%;
     background-color: black;
     
+}
+
+.itemDetailBtns{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+   
+}
+
+.btnCheckout{
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+.containerBtnCheckout{
+    width: 20%;
+    margin: 10px auto;
 }
 
 .textItemDetail{
 
     margin: 0px 20px;
+    h2{
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
     h2,h3,p{
         color: white;
         text-align: center;
@@ -104,6 +132,8 @@
     }
 }
 
+
+
 .numberCount{
     color: white;
     margin: 5px;
@@ -113,12 +143,19 @@
 }
 
 .itemCount{
+
     text-align: center;
-    width: 100%;
-    padding: 5px;
+    width: 40%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+        div{
+            margin-top: 10px;
+        }
 }
 
-.h1Cart, ul{
+
+ul{
     text-align: center;
 }
 
@@ -133,7 +170,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    margin: 5px auto;
+    margin: 10px auto;
+    background-color: #283e3ebf;
 
     img{
         width: 12%;
@@ -141,7 +179,24 @@
         padding: 5px;
         
     }
+    p{
+        font-size: 1.5rem;
+    }
   
+}
+
+.btnGroup{
+    margin: 20px;
+    border: solid rgba(172, 172, 172, 0.95);
+    border-radius: 20px;
+    padding: 10px;
+    background: #283e3ebf;
+}
+
+.totalAmount{
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 10px;
 }
 
 .lineFooter{
@@ -160,6 +215,7 @@
     text-align: center;
     color: #f7f3f3;
     padding-top: 40px;
+    margin-top: auto;
 
     h6 {
         font-size: 1.8rem;
@@ -170,15 +226,14 @@
     p {
         max-width: 500px;
         text-shadow: -3px 2px 1px rgb(0 0 0 / 46%);
-        margin: 10px auto;
         line-height: 28px;
         font-size: 1rem;
         padding: 5px;
     }
 
     img {
-        width: 70px;
-        height: 70px;
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -196,15 +251,14 @@
 
     a {
         text-decoration: none;
-        transition: 0.5s;
-
-        img {
-            &:hover {
-                transform: scale(1.2);
-
-            }
+        margin: 10px;
+        height: 100px;
+        width: 100px;
+        
+        svg{
+            width: 30px;
+            height: 30px;
         }
-
     }
 }
 

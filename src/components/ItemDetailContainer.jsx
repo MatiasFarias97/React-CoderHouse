@@ -13,6 +13,7 @@ const ItemDetailContainer = () =>{
     
     useEffect(() => {
        
+        // agregue IdItem
        const fetchItemDetailDb = async () => {
 
         const docRef = doc(db,"products", idItem)

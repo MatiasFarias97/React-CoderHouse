@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'
+
 
 
 const ItemCount = ({start,stock,onAdd}) =>{
@@ -31,15 +31,16 @@ const ItemCount = ({start,stock,onAdd}) =>{
   return (
     <div className='itemCount'>
         <ButtonGroup aria-label="Basic example">
-            <Button variant="light" onClick={decrement}> - </Button>
+            <Button variant="primary" onClick={decrement}> - </Button>
             <span className='numberCount'>{count}</span>
-            <Button variant="light" onClick={increment}> + </Button>
+            <Button variant="primary" onClick={increment}> + </Button>
         </ButtonGroup>  
         {
             stock
-            ?  <button onClick={() => onAdd(count)}>Agregar al carrito</button>
+            
+            ?  <div> <Button variant="primary" onClick={() => onAdd(count)}> AGREGAR AL CARRITO </Button> </div>
             : <p>No hay stock</p>
-        } 
+        }
     </div>
 
   );
@@ -47,6 +48,6 @@ const ItemCount = ({start,stock,onAdd}) =>{
  
 }
 
-
+// ?  <button onClick={() => onAdd(count)}>Agregar al carrito</button>
 
 export default ItemCount;

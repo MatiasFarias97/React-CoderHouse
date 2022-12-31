@@ -1,6 +1,4 @@
-// import products from '../utils/products'
 import { useEffect, useState } from 'react';
-// import customFetch from '../utils/customFetch'
 import { useParams } from 'react-router-dom';
 import ItemList from './ItemList';
 import { db } from '../utils/firebaseCfg'

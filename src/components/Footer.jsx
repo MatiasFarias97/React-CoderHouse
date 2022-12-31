@@ -1,4 +1,4 @@
-import { AiFillInstagram } from "react-icons/ai";
+import { AiFillInstagram, AiOutlineWhatsApp } from "react-icons/ai";
 
 
 const Footer = () =>{
@@ -12,9 +12,9 @@ const Footer = () =>{
     </p>
     <ul className="socials">
       <li>
-        {/* <a href="https://wa.link/emf33s" target="_blank">
-          <img src="../img/whatsapp.svg" alt="Link de whatsapp"/>
-        </a> */}
+        <a href="https://wa.link/emf33s" target="_blank">
+        <AiOutlineWhatsApp/>
+        </a>
       </li>
       <li>
         <a href="https://www.instagram.com/moscatovinoteca" target="_blank">

@@ -6,12 +6,31 @@ const CartContextProvider = ({children}) => {
 
     const [cartList, setCartList] = useState([])
 
+    const deleteItem = (id) => {
+        const  arrayDeleteItem = cartList.filter(item => item.id !== id)
+        setCartList(arrayDeleteItem)
+    }
+
+    const clear = () =>{
+        let newArray = [...cartList]
+        newArray.length = 0
+        setCartList(newArray)
+    }
+   
+
     const addItemButton = (item, qty) => {
 
-        if(cartList.includes(item)){
+        const listFilter = cartList.filter(cart => cart.id === item.id);
+        const keys = Object.keys(cartList);
 
-            console.log('eerr');
-            
+        if (listFilter.length > 0) {
+
+            let cartListNewArray = [...cartList]
+            const keyCart = keys.filter(key => cartList[key].id === item.id);
+            let cartListToEdit = { ...cartListNewArray[keyCart] };
+            cartListToEdit.quantity += qty 
+            cartListNewArray[keyCart] = cartListToEdit
+            setCartList(cartListNewArray) 
         
     } else {
         
@@ -29,8 +48,9 @@ const CartContextProvider = ({children}) => {
         }
     }
 
+
     return(
-        <CartContext.Provider value={{cartList, addItemButton}}>
+        <CartContext.Provider value={{cartList, addItemButton, deleteItem, clear}}>
             {children}
         </CartContext.Provider>
     )
