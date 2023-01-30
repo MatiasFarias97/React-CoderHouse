@@ -3,6 +3,7 @@ import { CartContext } from "./CartContext";
 import { serverTimestamp, setDoc, doc, collection, updateDoc, increment } from "firebase/firestore";
 import { db } from '../utils/firebaseCfg'
 import Swal from 'sweetalert2'
+import { AiOutlineFrown } from "react-icons/ai";
 
 const Cart = () => {
 
@@ -66,12 +67,12 @@ const Cart = () => {
     }
    
     return(
-       <div className="d-flex">
+       <div className="d-flex flex-column justify-content-center">
         <div className="my-3 containerCartItem">
                 <ul className="textWhite">
                 {
                     cartList.length === 0
-                    ? <p>TU CARRITO ESTA VACIO</p>
+                    ? <p className="flex-column">TU CARRITO ESTA VACIO <AiOutlineFrown/></p>
                     : cartList.map(item => 
                     <li className="cartItem row" key={item.id}><img src={item.image} alt=""/> 
                         <h2 className="col">{item.name}</h2> 

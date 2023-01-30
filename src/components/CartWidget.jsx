@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 
 const CartWidget = () => {
 
+
     return(
         <div className='divCart'>
           <Link to={'./cart'}>
             <BsCart2  className='cart'/>
-            <Badge bg="info">9</Badge>
+            <Badge bg="info"></Badge>
           </Link>
         </div>
     )

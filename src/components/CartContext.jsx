@@ -6,6 +6,7 @@ const CartContextProvider = ({children}) => {
 
     const [cartList, setCartList] = useState([])
 
+
     const deleteItem = (id) => {
         const  arrayDeleteItem = cartList.filter(item => item.id !== id)
         setCartList(arrayDeleteItem)
